@@ -4,7 +4,7 @@ MyBatis 分为三层架构，分别是基础支撑层、核心处理层和接口
 
 <div align="center"> <img src="https://technotes.oss-cn-shenzhen.aliyuncs.com/2022/202206152125788.png" width="800px"/> </div>
 
-## 基础支撑层
+## 一、基础支撑层
 
 MyBatis 基础支撑层可以划分为上图所示的九个基础模块。
 
@@ -21,11 +21,9 @@ MyBatis 基础支撑层可以划分为上图所示的九个基础模块。
 - 解析器模块：MyBatis 中有 mybatis-config.xml，Mapper.xml 两部分配置文件需要进行解析。
 - 事务管理模块：MyBatis 对数据库中的事务进行了一层简单的抽象，提供了简单易用的事务接口和实现。
 
-## 核心处理层
+## 二、核心处理层
 
 核心处理层是 MyBatis 核心实现所在，其中涉及 MyBatis 的初始化以及执行一条 SQL 语句的全流程。
-
-<div align="center"> <img src="https://technotes.oss-cn-shenzhen.aliyuncs.com/2022/202206152125788.png" width="800px"/> </div>
 
 ### 配置解析
 
@@ -49,7 +47,7 @@ SQL 语句的真正执行将会由 StatementHandler 实现。StatementHandler �
 
 很多成熟的开源框架，都会以各种方式提供扩展能力。当框架原生能力不能满足某些场景的时候，就可以针对这些场景实现一些插件来满足需求，这样的框架才能有足够的生命力。这也是 MyBatis 插件接口存在的意义。
 
-## 接口层
+## 三、接口层
 
 接口层是 MyBatis 暴露给调用的接口集合，这些接口都是使用 MyBatis 时最常用的一些接口，例如，SqlSession 接口、SqlSessionFactory 接口等。
 
